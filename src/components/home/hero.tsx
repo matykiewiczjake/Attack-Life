@@ -2,32 +2,35 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/reveal";
+import { FramedVisual } from "@/components/framed-visual";
 import { contactHref } from "@/lib/site-config";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden">
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,var(--accent),transparent)]"
-      />
-      <div className="mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 sm:py-28 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:px-8 lg:py-32">
+    <section className="border-b border-border/70">
+      <div className="mx-auto grid max-w-6xl gap-16 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[1.2fr_0.8fr] lg:items-end lg:gap-10 lg:px-8 lg:py-24">
         <div>
           <Reveal immediate delay={0}>
-            <span className="inline-flex items-center rounded-full border border-border bg-card px-3 py-1 text-xs font-medium tracking-wide text-muted-foreground uppercase">
-              Founder-led, by Ryan
-            </span>
+            <div className="flex items-center gap-3">
+              <span aria-hidden className="h-px w-8 bg-primary" />
+              <span className="text-xs font-medium tracking-[0.2em] text-primary uppercase">
+                Founder-led, by Ryan
+              </span>
+            </div>
           </Reveal>
 
           <Reveal immediate delay={0.1}>
-            <h1 className="mt-6 text-4xl leading-[1.05] font-semibold tracking-tight text-balance text-foreground sm:text-5xl lg:text-6xl">
-              Stop planning your comeback.
-              <span className="block text-primary">Start living it.</span>
+            <h1 className="mt-7 text-5xl leading-[0.95] font-semibold tracking-tight text-balance text-foreground sm:text-6xl lg:text-[5.25rem]">
+              Stop planning
+              <br />
+              your comeback.
+              <br />
+              <span className="text-primary">Start living it.</span>
             </h1>
           </Reveal>
 
           <Reveal immediate delay={0.2}>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+            <p className="mt-7 max-w-lg text-lg leading-relaxed text-muted-foreground">
               Attack Life is built on one idea: real change happens through
               real conversations, not funnels or checkout carts. Ryan works
               directly with a limited number of people at a time — through
@@ -41,7 +44,7 @@ export function Hero() {
               <Button
                 nativeButton={false}
                 size="lg"
-                className="h-12 px-6 text-base"
+                className="h-12 rounded-none px-6 text-base"
                 render={<Link href={contactHref} />}
               >
                 Contact Ryan
@@ -51,7 +54,7 @@ export function Hero() {
                 nativeButton={false}
                 variant="outline"
                 size="lg"
-                className="h-12 px-6 text-base"
+                className="h-12 rounded-none px-6 text-base"
                 render={<Link href="/about" />}
               >
                 Ryan&apos;s Story
@@ -61,13 +64,8 @@ export function Hero() {
         </div>
 
         <Reveal immediate delay={0.25} className="hidden lg:block">
-          <div className="relative aspect-square w-full overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-primary/25 via-accent to-secondary">
-            <div
-              aria-hidden
-              className="absolute inset-0 opacity-40 mix-blend-overlay [background-image:radial-gradient(circle_at_30%_20%,white,transparent_45%),radial-gradient(circle_at_75%_70%,white,transparent_40%)]"
-            />
-            {/* Placeholder visual — replace with real retreat/coaching photography */}
-          </div>
+          {/* Placeholder — replace with real retreat/coaching photography */}
+          <FramedVisual aspect="aspect-[3/4]" className="mx-auto max-w-xs" />
         </Reveal>
       </div>
     </section>

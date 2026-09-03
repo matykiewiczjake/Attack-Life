@@ -40,7 +40,11 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden md:block">
-          <Button nativeButton={false} render={<Link href={contactHref} />}>
+          <Button
+            nativeButton={false}
+            className="rounded-none"
+            render={<Link href={contactHref} />}
+          >
             Contact Ryan
           </Button>
         </div>
@@ -78,7 +82,7 @@ export function SiteHeader() {
             <div className="mt-auto p-4">
               <Button
                 nativeButton={false}
-                className="w-full"
+                className="w-full rounded-none"
                 render={<Link href={contactHref} onClick={() => setOpen(false)} />}
               >
                 Contact Ryan

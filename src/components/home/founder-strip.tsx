@@ -1,15 +1,15 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
+import { FramedVisual } from "@/components/framed-visual";
 
 export function FounderStrip() {
   return (
-    <section className="border-y border-border/70 bg-secondary/40">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 sm:py-24 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:px-8">
+    <section className="border-b border-border/70 bg-secondary/40">
+      <div className="mx-auto grid max-w-6xl gap-14 px-4 py-20 sm:px-6 sm:py-24 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:px-8">
         <Reveal>
-          <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-3xl border border-border bg-gradient-to-b from-primary/20 to-accent">
-            {/* Placeholder — replace with a photo of Ryan */}
-          </div>
+          {/* Placeholder — replace with a photo of Ryan */}
+          <FramedVisual offset="bl" className="w-full max-w-sm" />
         </Reveal>
 
         <Reveal delay={0.1}>

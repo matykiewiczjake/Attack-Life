@@ -20,7 +20,7 @@ export function FinalCta() {
             nativeButton={false}
             size="lg"
             variant="secondary"
-            className="mt-8 h-12 px-7 text-base"
+            className="mt-8 h-12 rounded-none px-7 text-base"
             render={<Link href={contactHref} />}
           >
             Contact Ryan
