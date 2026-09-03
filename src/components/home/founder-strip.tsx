@@ -1,20 +1,20 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
-import { TiltPanel } from "@/components/tilt-panel";
+import ryanImage from "@/assets/images/founder-ryan.webp";
 
 export function FounderStrip() {
   return (
     <section className="bg-card">
       <div className="mx-auto grid max-w-6xl sm:grid-cols-2">
-        <Reveal className="min-h-[18rem] sm:min-h-[26rem] lg:min-h-[30rem]">
-          {/* Placeholder — replace with a real photo of Ryan */}
-          <TiltPanel
-            tone="secondary"
-            aspect=""
-            glyph="R"
-            glyphClassName="text-[10rem]"
-            className="h-full w-full"
+        <Reveal className="relative min-h-[18rem] sm:min-h-[26rem] lg:min-h-[30rem]">
+          <Image
+            src={ryanImage}
+            alt="Ryan sitting on a rock outcrop in the desert at sunset"
+            fill
+            className="object-cover"
+            sizes="(min-width: 640px) 50vw, 100vw"
           />
         </Reveal>
 

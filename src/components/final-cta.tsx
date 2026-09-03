@@ -1,11 +1,24 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/reveal";
 import { contactHref } from "@/lib/site-config";
+import hikerImage from "@/assets/images/final-cta-hiker.webp";
 
 export function FinalCta() {
   return (
     <section className="relative overflow-hidden bg-primary">
+      <div className="absolute inset-0">
+        <Image
+          src={hikerImage}
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-primary/10" />
+      </div>
+
       <span
         aria-hidden
         className="font-heading pointer-events-none absolute -bottom-10 -left-4 text-[7rem] leading-none font-black whitespace-nowrap text-primary-foreground/10 uppercase select-none sm:text-[10rem]"
