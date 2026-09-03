@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils";
 
 const pillars = [
   {
-    number: "01",
     title: "Guided Retreats",
     description:
       "Step away from the noise. Multi-day, small-group retreats designed to reset your mind, body, and direction — guided by Ryan, in person, start to finish.",
@@ -17,7 +16,6 @@ const pillars = [
     offset: "",
   },
   {
-    number: "02",
     title: "Personal Development & Life Coaching",
     description:
       "Ongoing, one-on-one work for people ready to change how they think, decide, and act. Not a course you finish — a coach who stays in it with you.",
@@ -28,7 +26,6 @@ const pillars = [
     offset: "lg:mt-14",
   },
   {
-    number: "03",
     title: "Research Peptides",
     description:
       "A research-focused connection point for peptide inquiries. Research-use-only — no pricing, no dosing guidance, no health claims. Contact Ryan to discuss.",
@@ -62,18 +59,10 @@ export function Pillars() {
               <Link
                 href={pillar.href}
                 className={cn(
-                  "group flex h-full min-h-[26rem] flex-col justify-between p-8",
+                  "group flex h-full min-h-[26rem] flex-col justify-end p-8",
                   pillar.tone
                 )}
               >
-                <span
-                  className={cn(
-                    "font-heading text-2xl font-black opacity-40",
-                    pillar.accent
-                  )}
-                >
-                  {pillar.number}
-                </span>
                 <div>
                   <h3 className="font-heading text-2xl font-bold text-balance">
                     {pillar.title}
