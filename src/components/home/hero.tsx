@@ -1,20 +1,22 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/reveal";
-import { TiltPanel } from "@/components/tilt-panel";
 import { contactHref } from "@/lib/site-config";
+import heroImage from "@/assets/images/hero-desert-sunset.webp";
 
 export function Hero() {
   return (
     <section className="relative flex min-h-[80svh] items-end overflow-hidden border-b border-border/70 sm:min-h-[85svh] lg:min-h-[92vh]">
-      {/* Full-bleed background — placeholder for real hero photography (Ryan, a retreat, or the desert setting). */}
       <div className="absolute inset-0">
-        <TiltPanel
-          tone="secondary"
-          aspect=""
-          glyphClassName="text-[9rem] sm:text-[14rem] lg:text-[18rem]"
-          className="h-full w-full"
+        <Image
+          src={heroImage}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/55 to-background/10" />
         <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/25 to-transparent" />
