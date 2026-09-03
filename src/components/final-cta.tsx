@@ -16,38 +16,36 @@ export function FinalCta() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-primary/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary from-65% via-primary/90 via-85% to-primary/60 sm:from-40% sm:via-primary/40 sm:via-60% sm:to-transparent" />
       </div>
 
       <span
         aria-hidden
-        className="font-heading pointer-events-none absolute -bottom-10 -left-4 text-[7rem] leading-none font-black whitespace-nowrap text-primary-foreground/10 uppercase select-none sm:text-[10rem]"
+        className="font-heading pointer-events-none absolute -bottom-8 -left-4 text-[5rem] leading-none font-black whitespace-nowrap text-primary-foreground/10 uppercase select-none sm:text-[7rem]"
       >
         Let&apos;s talk
       </span>
-      <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+      <div className="relative mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
         <Reveal>
-          <div className="grid gap-8 lg:grid-cols-[1.3fr_0.7fr] lg:items-center">
+          <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-10">
             <div>
-              <h2 className="text-3xl font-black tracking-tight text-primary-foreground uppercase sm:text-5xl">
+              <h2 className="text-2xl font-black tracking-tight text-primary-foreground uppercase sm:text-3xl lg:text-4xl">
                 This starts with a conversation.
               </h2>
-              <p className="mt-4 max-w-xl text-lg leading-relaxed text-primary-foreground/85">
+              <p className="mt-2 max-w-md text-primary-foreground/85">
                 Tell Ryan what you&apos;re working on and where you want to
                 go — he&apos;ll respond personally.
               </p>
             </div>
-            <div className="flex lg:justify-end">
-              <Button
-                nativeButton={false}
-                size="lg"
-                variant="secondary"
-                className="h-12 rounded-none px-7 text-base font-bold"
-                render={<Link href={contactHref} />}
-              >
-                Contact Ryan
-              </Button>
-            </div>
+            <Button
+              nativeButton={false}
+              size="lg"
+              variant="secondary"
+              className="h-12 shrink-0 rounded-none px-7 text-base font-bold"
+              render={<Link href={contactHref} />}
+            >
+              Contact Ryan
+            </Button>
           </div>
         </Reveal>
       </div>
