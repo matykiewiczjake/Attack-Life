@@ -34,7 +34,7 @@ export function FinalCta() {
               </h2>
               <p className="mt-2 max-w-md text-primary-foreground/85">
                 Tell Ryan what you&apos;re working on and where you want to
-                go — he&apos;ll respond personally.
+                go.
               </p>
             </div>
             <Button

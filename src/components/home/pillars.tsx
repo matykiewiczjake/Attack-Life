@@ -111,9 +111,8 @@ export function Pillars() {
                   Research Peptides
                 </h3>
                 <p className="mt-3 leading-relaxed opacity-85">
-                  A research-focused connection point for peptide inquiries.
-                  Research-use-only — no pricing, no dosing guidance, no
-                  health claims. Contact Ryan to discuss.
+                  A research-focused connection point for peptide inquiries
+                  — reach out to talk with Ryan directly.
                 </p>
                 <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-bold text-primary transition-transform group-hover:translate-x-1">
                   Learn More

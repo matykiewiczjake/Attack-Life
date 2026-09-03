@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { FlaskConical, MessageCircle, ShieldCheck } from "lucide-react";
+import { FlaskConical, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
@@ -10,7 +10,7 @@ import { FinalCta } from "@/components/final-cta";
 export const metadata: Metadata = {
   title: "Research Peptides",
   description:
-    "A research-focused connection point for peptide inquiries. Research-use-only — no pricing, no dosing guidance, no health claims.",
+    "A research-focused connection point for peptide inquiries — reach out to talk with Ryan directly.",
   alternates: { canonical: "/peptides" },
 };
 
@@ -20,12 +20,6 @@ const info = [
     title: "Research Use Only",
     description:
       "Everything discussed here is intended for laboratory research purposes only — not for human consumption.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "No Dosing or Health Claims",
-    description:
-      "Ryan won't provide dosing guidance or make health claims, in writing or in conversation. That's outside the scope of this connection.",
   },
   {
     icon: MessageCircle,
@@ -41,7 +35,7 @@ export default function PeptidesPage() {
       <PageHero
         eyebrow="Research Peptides"
         title="A research-focused connection point."
-        description="Ryan connects people with sourcing for peptide research. This is strictly research-use-only — no pricing, dosing guidance, or health claims, here or in conversation."
+        description="Ryan connects people with sourcing for peptide research — a direct conversation, not a storefront."
         visual={{ tone: "outline", glyph: "RP" }}
       >
         <Button
@@ -64,7 +58,7 @@ export default function PeptidesPage() {
           </h2>
         </Reveal>
         <div className="mt-10">
-          <IconFeatureGrid features={info} columns={3} />
+          <IconFeatureGrid features={info} columns={2} />
         </div>
       </section>
 

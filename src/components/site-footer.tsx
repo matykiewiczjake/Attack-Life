@@ -15,7 +15,7 @@ export function SiteFooter() {
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
               {siteConfig.tagline} Retreats, coaching, and peptide research —
-              every path leads to a real conversation with Ryan.
+              every path leads to a conversation with Ryan.
             </p>
           </div>
 

@@ -24,7 +24,7 @@ const expectations = [
   {
     title: "Peptide inquiries stay research-focused",
     description:
-      "Research-use-only — Ryan can point you to sourcing and research context, not pricing or dosing guidance.",
+      "Ryan can point you to sourcing and research context for your work.",
   },
 ];
 
