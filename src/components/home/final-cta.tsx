@@ -8,29 +8,34 @@ export function FinalCta() {
     <section className="relative overflow-hidden bg-primary">
       <span
         aria-hidden
-        className="font-heading pointer-events-none absolute -top-6 left-1/2 -z-0 -translate-x-1/2 text-[7rem] leading-none font-black whitespace-nowrap text-primary-foreground/10 uppercase select-none sm:text-[10rem]"
+        className="font-heading pointer-events-none absolute -bottom-10 -left-4 text-[7rem] leading-none font-black whitespace-nowrap text-primary-foreground/10 uppercase select-none sm:text-[10rem]"
       >
         Let&apos;s talk
       </span>
-      <div className="relative mx-auto max-w-4xl px-4 py-24 text-center sm:px-6 sm:py-28 lg:px-8">
+      <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
         <Reveal>
-          <h2 className="text-3xl font-black tracking-tight text-primary-foreground uppercase sm:text-5xl">
-            This starts with a conversation.
-          </h2>
-          <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-primary-foreground/85">
-            No forms that go nowhere, no bots. Tell Ryan what you&apos;re
-            working on and where you want to go — he&apos;ll respond
-            personally.
-          </p>
-          <Button
-            nativeButton={false}
-            size="lg"
-            variant="secondary"
-            className="mt-8 h-12 rounded-none px-7 text-base font-bold"
-            render={<Link href={contactHref} />}
-          >
-            Contact Ryan
-          </Button>
+          <div className="grid gap-8 lg:grid-cols-[1.3fr_0.7fr] lg:items-center">
+            <div>
+              <h2 className="text-3xl font-black tracking-tight text-primary-foreground uppercase sm:text-5xl">
+                This starts with a conversation.
+              </h2>
+              <p className="mt-4 max-w-xl text-lg leading-relaxed text-primary-foreground/85">
+                Tell Ryan what you&apos;re working on and where you want to
+                go — he&apos;ll respond personally.
+              </p>
+            </div>
+            <div className="flex lg:justify-end">
+              <Button
+                nativeButton={false}
+                size="lg"
+                variant="secondary"
+                className="h-12 rounded-none px-7 text-base font-bold"
+                render={<Link href={contactHref} />}
+              >
+                Contact Ryan
+              </Button>
+            </div>
+          </div>
         </Reveal>
       </div>
     </section>

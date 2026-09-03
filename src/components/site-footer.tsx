@@ -14,8 +14,8 @@ export function SiteFooter() {
               {siteConfig.name}
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              {siteConfig.tagline} No self-serve booking, no checkout — every
-              path here leads to a real conversation with Ryan.
+              {siteConfig.tagline} Retreats, coaching, and peptide research —
+              every path leads to a real conversation with Ryan.
             </p>
           </div>
 

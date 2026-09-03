@@ -11,6 +11,7 @@ type TiltPanelProps = {
   aspect?: string;
   tone?: keyof typeof tones;
   glyph?: string;
+  glyphClassName?: string;
 };
 
 /**
@@ -23,6 +24,7 @@ export function TiltPanel({
   aspect = "aspect-[4/5]",
   tone = "primary",
   glyph = "AL",
+  glyphClassName = "text-8xl sm:text-9xl",
 }: TiltPanelProps) {
   return (
     <div
@@ -35,7 +37,10 @@ export function TiltPanel({
     >
       <span
         aria-hidden
-        className="font-heading pointer-events-none -mb-6 -ml-2 block text-8xl leading-none font-black opacity-15 select-none sm:text-9xl"
+        className={cn(
+          "font-heading pointer-events-none -mb-6 -ml-2 block leading-none font-black opacity-15 select-none",
+          glyphClassName
+        )}
       >
         {glyph}
       </span>
