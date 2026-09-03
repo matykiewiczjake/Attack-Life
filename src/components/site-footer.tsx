@@ -9,7 +9,7 @@ export function SiteFooter() {
           <div className="max-w-sm">
             <Link
               href="/"
-              className="font-heading text-lg font-semibold tracking-tight text-foreground"
+              className="font-heading text-lg font-black tracking-tight text-foreground uppercase"
             >
               {siteConfig.name}
             </Link>

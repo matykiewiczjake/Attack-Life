@@ -22,7 +22,7 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="font-heading text-lg font-semibold tracking-tight text-foreground"
+          className="font-heading text-lg font-black tracking-tight text-foreground uppercase"
         >
           {siteConfig.name}
         </Link>
