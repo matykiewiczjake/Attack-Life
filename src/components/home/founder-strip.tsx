@@ -7,7 +7,7 @@ import ryanImage from "@/assets/images/founder-ryan.webp";
 export function FounderStrip() {
   return (
     <section className="bg-card">
-      <div className="mx-auto grid max-w-6xl sm:grid-cols-2">
+      <div className="grid sm:grid-cols-2">
         <Reveal className="relative min-h-[18rem] sm:min-h-[26rem] lg:min-h-[30rem]">
           <Image
             src={ryanImage}
@@ -20,9 +20,9 @@ export function FounderStrip() {
 
         <Reveal
           delay={0.1}
-          className="flex items-center px-4 py-14 sm:px-10 sm:py-16 lg:px-16"
+          className="flex items-center px-4 py-14 sm:px-10 sm:py-16 lg:px-16 xl:px-24"
         >
-          <div>
+          <div className="max-w-lg">
             <p className="text-sm font-bold tracking-[0.15em] text-primary uppercase">
               Built by Ryan, not a brand team
             </p>
