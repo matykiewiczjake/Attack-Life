@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { CalendarRange, Home as HomeIcon, MessageCircle, Users } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { PageHero } from "@/components/page-hero";
+import { CalendarRange, Home as HomeIcon, Users } from "lucide-react";
+import { RetreatsHero } from "@/components/retreats/hero";
 import { Reveal } from "@/components/reveal";
-import { IconFeatureGrid } from "@/components/icon-feature-grid";
+import { IncludedGrid } from "@/components/retreats/included-grid";
+import { DatesSection } from "@/components/retreats/dates-section";
 import { FinalCta } from "@/components/final-cta";
-import { contactHref } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Guided Retreats",
@@ -21,45 +19,28 @@ const included = [
     title: "Small, Intentional Groups",
     description:
       "Retreats stay small by design — enough people to build real connection, few enough that Ryan works with everyone directly.",
+    glyph: "01",
   },
   {
     icon: CalendarRange,
     title: "Multi-Day Format",
     description:
       "Several days away from your normal routine, structured around reflection, movement, and honest conversation.",
+    glyph: "02",
   },
   {
     icon: HomeIcon,
     title: "Lodging & Meals Included",
     description:
       "Everything during the retreat is handled — you show up and do the work.",
-  },
-  {
-    icon: MessageCircle,
-    title: "Post-Retreat Follow-Up",
-    description:
-      "A check-in after you're home, so what you build on retreat doesn't stay on retreat.",
+    glyph: "03",
   },
 ];
 
 export default function RetreatsPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Guided Retreats"
-        title="Reset. Reconnect. Rebuild."
-        description="Multi-day, small-group retreats led by Ryan — built to pull you out of autopilot and give you space to think clearly about what's next."
-        visual={{ tone: "primary", glyph: "GR" }}
-      >
-        <Button
-          nativeButton={false}
-          size="lg"
-          className="h-12 rounded-none px-6 text-base font-bold"
-          render={<Link href={contactHref} />}
-        >
-          Contact Ryan to Book
-        </Button>
-      </PageHero>
+      <RetreatsHero />
 
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
         <Reveal>
@@ -71,37 +52,11 @@ export default function RetreatsPage() {
           </h2>
         </Reveal>
         <div className="mt-10">
-          <IconFeatureGrid features={included} />
+          <IncludedGrid features={included} />
         </div>
       </section>
 
-      <section className="bg-card">
-        <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
-          <Reveal>
-            <p className="text-sm font-bold tracking-[0.15em] text-primary uppercase">
-              Dates &amp; Locations
-            </p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Retreats run in small cohorts throughout the year.
-            </h2>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              [Placeholder] Upcoming dates and locations aren&apos;t listed
-              publicly — reach out and Ryan will let you know what&apos;s
-              next, what it costs, and whether it&apos;s a fit for where
-              you&apos;re at.
-            </p>
-            <Button
-              nativeButton={false}
-              size="lg"
-              variant="outline"
-              className="mt-8 h-12 rounded-none px-6 text-base font-bold"
-              render={<Link href={contactHref} />}
-            >
-              Contact Ryan to Book
-            </Button>
-          </Reveal>
-        </div>
-      </section>
+      <DatesSection />
 
       <FinalCta />
     </>
