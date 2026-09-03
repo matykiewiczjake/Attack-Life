@@ -15,17 +15,17 @@ export default async function Image() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "80px",
-          background: "#F7F3EA",
-          color: "#332619",
+          background: "#241d15",
+          color: "#f7ecd8",
         }}
       >
         <div
           style={{
             fontSize: 32,
-            fontWeight: 600,
+            fontWeight: 700,
             letterSpacing: 2,
             textTransform: "uppercase",
-            color: "#B04A26",
+            color: "#e8b95c",
           }}
         >
           {siteConfig.name}
@@ -33,15 +33,16 @@ export default async function Image() {
         <div
           style={{
             marginTop: 24,
-            fontSize: 64,
-            fontWeight: 700,
-            lineHeight: 1.1,
+            fontSize: 68,
+            fontWeight: 800,
+            lineHeight: 1.05,
             maxWidth: 900,
+            textTransform: "uppercase",
           }}
         >
-          Stop planning your comeback. Start living it.
+          Stop planning your comeback. Start living.
         </div>
-        <div style={{ marginTop: 28, fontSize: 28, color: "#5C4B3A" }}>
+        <div style={{ marginTop: 28, fontSize: 28, color: "#c98a4b" }}>
           Retreats &middot; Life Coaching &middot; Research Peptides
         </div>
       </div>

@@ -13,6 +13,7 @@ const pillars = [
     href: "/retreats",
     cta: "Explore Retreats",
     tone: "bg-primary text-primary-foreground",
+    accent: "",
     offset: "",
   },
   {
@@ -22,7 +23,8 @@ const pillars = [
       "Ongoing, one-on-one work for people ready to change how they think, decide, and act. Not a course you finish — a coach who stays in it with you.",
     href: "/coaching",
     cta: "Learn About Coaching",
-    tone: "bg-foreground text-background",
+    tone: "bg-secondary text-secondary-foreground",
+    accent: "",
     offset: "lg:mt-14",
   },
   {
@@ -32,7 +34,8 @@ const pillars = [
       "A research-focused connection point for peptide inquiries. Research-use-only — no pricing, no dosing guidance, no health claims. Contact Ryan to discuss.",
     href: "/peptides",
     cta: "Learn More",
-    tone: "bg-[oklch(0.66_0.11_90)] text-foreground",
+    tone: "border-2 border-primary/70 bg-card text-foreground",
+    accent: "text-primary",
     offset: "",
   },
 ];
@@ -63,7 +66,12 @@ export function Pillars() {
                   pillar.tone
                 )}
               >
-                <span className="font-heading text-2xl font-black opacity-40">
+                <span
+                  className={cn(
+                    "font-heading text-2xl font-black opacity-40",
+                    pillar.accent
+                  )}
+                >
                   {pillar.number}
                 </span>
                 <div>
@@ -73,7 +81,12 @@ export function Pillars() {
                   <p className="mt-3 leading-relaxed opacity-85">
                     {pillar.description}
                   </p>
-                  <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-bold transition-transform group-hover:translate-x-1">
+                  <span
+                    className={cn(
+                      "mt-6 inline-flex items-center gap-1.5 text-sm font-bold transition-transform group-hover:translate-x-1",
+                      pillar.accent
+                    )}
+                  >
                     {pillar.cta}
                     <ArrowRight className="size-4" aria-hidden />
                   </span>

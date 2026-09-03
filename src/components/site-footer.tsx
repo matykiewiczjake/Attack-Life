@@ -3,7 +3,7 @@ import { contactHref, navLinks, siteConfig } from "@/lib/site-config";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border/70 bg-secondary/40">
+    <footer className="border-t border-border/70 bg-card">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-10 md:flex-row md:justify-between">
           <div className="max-w-sm">

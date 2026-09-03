@@ -2,8 +2,8 @@ import { cn } from "@/lib/utils";
 
 const tones = {
   primary: "bg-primary text-primary-foreground",
-  ink: "bg-foreground text-background",
-  gold: "bg-[oklch(0.66_0.11_90)] text-foreground",
+  secondary: "bg-secondary text-secondary-foreground",
+  outline: "bg-card text-foreground border-2 border-primary/70",
 } as const;
 
 type TiltPanelProps = {

@@ -7,7 +7,7 @@ import { contactHref } from "@/lib/site-config";
 
 export function Hero() {
   return (
-    <section className="border-b border-border/70">
+    <section className="sunset-glow relative border-b border-border/70">
       <div className="mx-auto grid max-w-6xl gap-16 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-10 lg:px-8 lg:py-24">
         <div>
           <Reveal immediate delay={0}>
@@ -66,7 +66,11 @@ export function Hero() {
 
         <Reveal immediate delay={0.25} className="hidden lg:block">
           {/* Placeholder — replace with real retreat/coaching photography */}
-          <TiltPanel aspect="aspect-[3/4]" className="mx-auto max-w-xs" />
+          <TiltPanel
+            tone="secondary"
+            aspect="aspect-[3/4]"
+            className="mx-auto max-w-xs"
+          />
         </Reveal>
       </div>
     </section>

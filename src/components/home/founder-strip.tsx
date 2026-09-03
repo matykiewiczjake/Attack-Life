@@ -5,7 +5,7 @@ import { TiltPanel } from "@/components/tilt-panel";
 
 export function FounderStrip() {
   return (
-    <section className="bg-foreground">
+    <section className="bg-card">
       <div className="mx-auto grid max-w-6xl gap-14 px-4 py-20 sm:px-6 sm:py-24 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:px-8">
         <Reveal>
           {/* Placeholder — replace with a photo of Ryan */}
@@ -21,11 +21,11 @@ export function FounderStrip() {
           <p className="text-sm font-bold tracking-[0.15em] text-primary uppercase">
             Built by Ryan, not a brand team
           </p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-background sm:text-4xl">
+          <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             This isn&apos;t a wellness company. It&apos;s one person&apos;s
             practice, built for people who are serious about changing.
           </h2>
-          <p className="mt-5 max-w-xl text-lg leading-relaxed text-background/70">
+          <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted-foreground">
             [Placeholder] Ryan built Attack Life after his own reset — walking
             away from what wasn&apos;t working and rebuilding a life on his
             own terms. Every retreat, every coaching relationship, and every
