@@ -7,8 +7,20 @@ import { contactHref } from "@/lib/site-config";
 
 export function Hero() {
   return (
-    <section className="sunset-glow relative border-b border-border/70">
-      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+    <section className="relative flex min-h-[80svh] items-end overflow-hidden border-b border-border/70 sm:min-h-[85svh] lg:min-h-[92vh]">
+      {/* Full-bleed background — placeholder for real hero photography (Ryan, a retreat, or the desert setting). */}
+      <div className="absolute inset-0">
+        <TiltPanel
+          tone="secondary"
+          aspect=""
+          glyphClassName="text-[9rem] sm:text-[14rem] lg:text-[18rem]"
+          className="h-full w-full"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/55 to-background/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/25 to-transparent" />
+      </div>
+
+      <div className="relative mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <Reveal immediate delay={0}>
           <span className="inline-block bg-foreground px-3 py-1.5 text-xs font-bold tracking-[0.15em] text-background uppercase">
             Founder-led, by Ryan
@@ -62,16 +74,6 @@ export function Hero() {
             </div>
           </Reveal>
         </div>
-
-        <Reveal immediate delay={0.35} className="mt-14">
-          {/* Placeholder — replace with real retreat/coaching photography */}
-          <TiltPanel
-            tone="secondary"
-            aspect="aspect-[21/9]"
-            glyphClassName="text-[5rem] sm:text-[8rem]"
-            className="w-full"
-          />
-        </Reveal>
       </div>
     </section>
   );
