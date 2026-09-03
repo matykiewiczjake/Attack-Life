@@ -16,32 +16,21 @@ export function FinalCta() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary from-65% via-primary/90 via-85% to-primary/60 sm:from-40% sm:via-primary/40 sm:via-60% sm:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary from-20% via-primary/55 via-45% to-primary/15" />
       </div>
 
-      <span
-        aria-hidden
-        className="font-heading pointer-events-none absolute -bottom-8 -left-4 text-[5rem] leading-none font-black whitespace-nowrap text-primary-foreground/10 uppercase select-none sm:text-[7rem]"
-      >
-        Let&apos;s talk
-      </span>
-      <div className="relative mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
+      <div className="relative mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <Reveal>
-          <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-10">
-            <div>
-              <h2 className="text-2xl font-black tracking-tight text-primary-foreground uppercase sm:text-3xl lg:text-4xl">
-                This starts with a conversation.
-              </h2>
-              <p className="mt-2 max-w-md text-primary-foreground/85">
-                Tell Ryan what you&apos;re working on and where you want to
-                go.
-              </p>
-            </div>
+          <div className="max-w-sm">
+            <h2 className="text-3xl font-black tracking-tight text-primary-foreground uppercase sm:text-4xl">
+              Let&apos;s Talk
+            </h2>
+            <p className="mt-3 leading-relaxed text-primary-foreground/85">
+              Tell Ryan what you&apos;re working on and where you want to go.
+            </p>
             <Button
               nativeButton={false}
-              size="lg"
-              variant="secondary"
-              className="h-12 shrink-0 rounded-none px-7 text-base font-bold"
+              className="mt-5 h-11 rounded-none bg-background px-6 text-sm font-bold text-foreground hover:bg-background/90"
               render={<Link href={contactHref} />}
             >
               Contact Ryan
