@@ -11,38 +11,52 @@ export function Pillars() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
       <Reveal>
-        <div className="max-w-2xl">
-          <h2 className="text-4xl font-black tracking-tight text-foreground uppercase sm:text-5xl">
-            Three ways to work with Ryan
-          </h2>
-          <p className="mt-4 text-muted-foreground">
-            Retreats, coaching, or peptide research — each one starts with
-            Ryan, personally.
-          </p>
-        </div>
+        <h2 className="text-4xl font-black tracking-tight text-foreground uppercase sm:text-5xl">
+          Three ways to work with Ryan
+        </h2>
+        <p className="mt-4 max-w-2xl text-muted-foreground">
+          Retreats, coaching, or peptide research — each one starts with
+          Ryan, personally.
+        </p>
       </Reveal>
 
-      <div className="mt-14 grid gap-5 sm:grid-cols-2">
-        {/* Guided Retreats — photo tile */}
-        <Reveal delay={0}>
+      <div className="mt-14 grid gap-5 sm:grid-cols-2 sm:grid-rows-2">
+        {/* Guided Retreats — one card: photo on top, gold panel below */}
+        <Reveal delay={0} className="h-full sm:row-span-2">
           <HoverLift className="h-full">
             <Link
               href="/retreats"
-              className="relative block h-full min-h-[16rem] overflow-hidden lg:min-h-[19rem]"
+              className="group flex h-full flex-col overflow-hidden"
             >
-              <Image
-                src={retreatsImage}
-                alt="A retreat evening around a fire pit in the desert"
-                fill
-                className="object-cover"
-                sizes="(min-width: 640px) 50vw, 100vw"
-              />
+              <div className="relative min-h-[12rem] flex-1">
+                <Image
+                  src={retreatsImage}
+                  alt="A retreat evening around a fire pit in the desert"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 640px) 50vw, 100vw"
+                />
+              </div>
+              <div className="shrink-0 bg-primary p-8 text-primary-foreground">
+                <h3 className="font-heading text-2xl font-bold text-balance">
+                  Guided Retreats
+                </h3>
+                <p className="mt-3 leading-relaxed opacity-85">
+                  Multi-day, small-group retreats designed to reset your
+                  mind, body, and direction — guided by Ryan, in person,
+                  start to finish.
+                </p>
+                <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-bold transition-transform group-hover:translate-x-1">
+                  Explore Retreats
+                  <ArrowRight className="size-4" aria-hidden />
+                </span>
+              </div>
             </Link>
           </HoverLift>
         </Reveal>
 
         {/* Personal Development & Life Coaching — photo + text combined */}
-        <Reveal delay={0.1}>
+        <Reveal delay={0.1} className="h-full">
           <HoverLift className="h-full">
             <Link
               href="/coaching"
@@ -76,31 +90,8 @@ export function Pillars() {
           </HoverLift>
         </Reveal>
 
-        {/* Guided Retreats — text tile */}
-        <Reveal delay={0.15}>
-          <HoverLift className="h-full">
-            <Link
-              href="/retreats"
-              className="group flex h-full min-h-[13rem] flex-col justify-center bg-primary p-8 text-primary-foreground lg:min-h-[15rem]"
-            >
-              <h3 className="font-heading text-2xl font-bold text-balance">
-                Guided Retreats
-              </h3>
-              <p className="mt-3 leading-relaxed opacity-85">
-                Multi-day, small-group retreats designed to reset your mind,
-                body, and direction — guided by Ryan, in person, start to
-                finish.
-              </p>
-              <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-bold transition-transform group-hover:translate-x-1">
-                Explore Retreats
-                <ArrowRight className="size-4" aria-hidden />
-              </span>
-            </Link>
-          </HoverLift>
-        </Reveal>
-
         {/* Research Peptides — photo + text combined */}
-        <Reveal delay={0.2}>
+        <Reveal delay={0.2} className="h-full">
           <HoverLift className="h-full">
             <Link
               href="/peptides"
