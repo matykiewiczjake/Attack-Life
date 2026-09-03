@@ -5,9 +5,7 @@ import { contactHref } from "@/lib/site-config";
 
 export function FinalCta() {
   return (
-    <section
-      className="relative overflow-hidden bg-primary [clip-path:polygon(0_2.5rem,100%_0,100%_100%,0_100%)] sm:[clip-path:polygon(0_4rem,100%_0,100%_100%,0_100%)]"
-    >
+    <section className="relative overflow-hidden bg-primary">
       <span
         aria-hidden
         className="font-heading pointer-events-none absolute -top-6 left-1/2 -z-0 -translate-x-1/2 text-[7rem] leading-none font-black whitespace-nowrap text-primary-foreground/10 uppercase select-none sm:text-[10rem]"

@@ -11,7 +11,6 @@ export function FounderStrip() {
           {/* Placeholder — replace with a photo of Ryan */}
           <TiltPanel
             tone="primary"
-            rotate="rotate-2"
             aspect="aspect-[4/5]"
             className="w-full max-w-sm"
           />

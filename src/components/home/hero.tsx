@@ -68,8 +68,8 @@ export function Hero() {
           {/* Placeholder — replace with real retreat/coaching photography */}
           <TiltPanel
             tone="secondary"
-            aspect="aspect-[3/4]"
-            className="mx-auto max-w-xs"
+            aspect="aspect-[4/5]"
+            className="mx-auto max-w-sm"
           />
         </Reveal>
       </div>

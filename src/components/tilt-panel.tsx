@@ -9,20 +9,18 @@ const tones = {
 type TiltPanelProps = {
   className?: string;
   aspect?: string;
-  rotate?: string;
   tone?: keyof typeof tones;
   glyph?: string;
 };
 
 /**
- * A single confidently-rotated, grain-textured color block used as a
- * photography placeholder. Carries a huge low-opacity monogram so it reads
- * as a deliberate graphic mark rather than an empty rectangle.
+ * A single grain-textured color block used as a photography placeholder.
+ * Carries a huge low-opacity monogram so it reads as a deliberate graphic
+ * mark rather than an empty rectangle.
  */
 export function TiltPanel({
   className,
-  aspect = "aspect-[3/4]",
-  rotate = "-rotate-3",
+  aspect = "aspect-[4/5]",
   tone = "primary",
   glyph = "AL",
 }: TiltPanelProps) {
@@ -31,7 +29,6 @@ export function TiltPanel({
       className={cn(
         "texture-grain relative flex w-full items-end overflow-hidden border border-foreground/10",
         tones[tone],
-        rotate,
         aspect,
         className
       )}
