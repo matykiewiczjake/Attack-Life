@@ -2,6 +2,7 @@ import Image, { type StaticImageData } from "next/image";
 import type { LucideIcon } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { TiltPanel } from "@/components/tilt-panel";
+import { cn } from "@/lib/utils";
 
 type Feature = {
   icon: LucideIcon;
@@ -12,13 +13,19 @@ type Feature = {
   imageAlt?: string;
 };
 
-type IncludedGridProps = {
+type PhotoFeatureGridProps = {
   features: Feature[];
+  columns?: 2 | 3;
 };
 
-export function IncludedGrid({ features }: IncludedGridProps) {
+export function PhotoFeatureGrid({ features, columns = 3 }: PhotoFeatureGridProps) {
   return (
-    <div className="grid gap-5 sm:grid-cols-3">
+    <div
+      className={cn(
+        "grid gap-5",
+        columns === 2 ? "sm:grid-cols-2" : "sm:grid-cols-3"
+      )}
+    >
       {features.map((feature, index) => (
         <Reveal key={feature.title} delay={index * 0.08}>
           <div className="h-full overflow-hidden border border-border/70 bg-card">
@@ -29,11 +36,15 @@ export function IncludedGrid({ features }: IncludedGridProps) {
                   alt={feature.imageAlt ?? ""}
                   fill
                   className="object-cover"
-                  sizes="(min-width: 640px) 33vw, 100vw"
+                  sizes={
+                    columns === 2
+                      ? "(min-width: 640px) 50vw, 100vw"
+                      : "(min-width: 640px) 33vw, 100vw"
+                  }
                 />
               </div>
             ) : (
-              // Placeholder — replace with real retreat photography
+              // Placeholder — replace with real photography
               <TiltPanel
                 tone="secondary"
                 aspect="aspect-[4/3]"

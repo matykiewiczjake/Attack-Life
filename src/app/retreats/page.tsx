@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { CalendarRange, Home as HomeIcon, Users } from "lucide-react";
 import { RetreatsHero } from "@/components/retreats/hero";
 import { Reveal } from "@/components/reveal";
-import { IncludedGrid } from "@/components/retreats/included-grid";
+import { PhotoFeatureGrid } from "@/components/photo-feature-grid";
 import { DatesSection } from "@/components/retreats/dates-section";
 import { FinalCta } from "@/components/final-cta";
 import smallGroupsImage from "@/assets/images/retreats-small-groups.jpg";
@@ -61,7 +61,7 @@ export default function RetreatsPage() {
           </h2>
         </Reveal>
         <div className="mt-10">
-          <IncludedGrid features={included} />
+          <PhotoFeatureGrid features={included} columns={3} />
         </div>
       </section>
 
