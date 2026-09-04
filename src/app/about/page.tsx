@@ -3,7 +3,6 @@ import { Compass, Mountain, Users } from "lucide-react";
 import { AboutHero } from "@/components/about/hero";
 import { Reveal } from "@/components/reveal";
 import { FinalCta } from "@/components/final-cta";
-import ctaImage from "@/assets/images/about-cta-sunset-ridge.webp";
 
 export const metadata: Metadata = {
   title: "About Ryan",
@@ -86,7 +85,6 @@ export default function AboutPage() {
       </section>
 
       <FinalCta
-        variant="photo"
         eyebrow="Let's Talk"
         title={
           <>
@@ -94,9 +92,6 @@ export default function AboutPage() {
             <span className="block text-primary">What&apos;s next?</span>
           </>
         }
-        description="Tell Ryan what you're working on and where you want to go."
-        backgroundImage={ctaImage}
-        backgroundImageAlt="Sunset over a mountain ridge"
       />
     </>
   );
