@@ -6,6 +6,7 @@ import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
 import { IconFeatureGrid } from "@/components/icon-feature-grid";
 import { FinalCta } from "@/components/final-cta";
+import peptidesHeroImage from "@/assets/images/peptides-hero.jpg";
 
 export const metadata: Metadata = {
   title: "Research Peptides",
@@ -36,7 +37,12 @@ export default function PeptidesPage() {
         eyebrow="Research Peptides"
         title="A research-focused connection point."
         description="Ryan connects people with sourcing for peptide research — a direct conversation, not a storefront."
-        visual={{ tone: "outline", glyph: "RP" }}
+        visual={{
+          tone: "outline",
+          glyph: "RP",
+          image: peptidesHeroImage,
+          imageAlt: "Overlooking Machu Picchu",
+        }}
       >
         <Button
           nativeButton={false}

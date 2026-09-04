@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Image, { type StaticImageData } from "next/image";
 import { Reveal } from "@/components/reveal";
 import { TiltPanel } from "@/components/tilt-panel";
 import { cn } from "@/lib/utils";
@@ -10,6 +11,8 @@ type PageHeroProps = {
   visual?: {
     tone: "primary" | "secondary" | "outline";
     glyph: string;
+    image?: StaticImageData;
+    imageAlt?: string;
   };
   children?: ReactNode;
 };
@@ -58,13 +61,25 @@ export function PageHero({
 
         {visual && (
           <Reveal immediate delay={0.25}>
-            {/* Placeholder — replace with real photography */}
-            <TiltPanel
-              tone={visual.tone}
-              glyph={visual.glyph}
-              aspect="aspect-[4/5]"
-              className="w-full"
-            />
+            {visual.image ? (
+              <div className="relative aspect-[4/5] w-full overflow-hidden border border-foreground/10">
+                <Image
+                  src={visual.image}
+                  alt={visual.imageAlt ?? ""}
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                />
+              </div>
+            ) : (
+              // Placeholder — replace with real photography
+              <TiltPanel
+                tone={visual.tone}
+                glyph={visual.glyph}
+                aspect="aspect-[4/5]"
+                className="w-full"
+              />
+            )}
           </Reveal>
         )}
       </div>
