@@ -7,6 +7,7 @@ import { DatesSection } from "@/components/retreats/dates-section";
 import { FinalCta } from "@/components/final-cta";
 import smallGroupsImage from "@/assets/images/retreats-small-groups.jpg";
 import mealsImage from "@/assets/images/retreats-meals.jpg";
+import multiDayImage from "@/assets/images/retreats-multi-day.jpg";
 
 export const metadata: Metadata = {
   title: "Guided Retreats",
@@ -31,6 +32,8 @@ const included = [
     description:
       "Several days away from your normal routine, structured around reflection, movement, and honest conversation.",
     glyph: "02",
+    image: multiDayImage,
+    imageAlt: "The retreat group together overlooking the Maras salt terraces",
   },
   {
     icon: HomeIcon,
