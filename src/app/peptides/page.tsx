@@ -8,6 +8,7 @@ import { PhotoFeatureGrid } from "@/components/photo-feature-grid";
 import { FinalCta } from "@/components/final-cta";
 import peptidesBackgroundImage from "@/assets/images/pillars-peptides.webp";
 import researchNotesImage from "@/assets/images/peptides-research-notes.webp";
+import directConversationImage from "@/assets/images/peptides-direct-conversation.webp";
 
 export const metadata: Metadata = {
   title: "Research Peptides",
@@ -32,6 +33,8 @@ const info = [
     description:
       "If you have questions about sourcing or research context, reach out and Ryan will talk it through with you directly.",
     glyph: "02",
+    image: directConversationImage,
+    imageAlt: "Ryan on a video call at his desk",
   },
 ];
 
