@@ -7,7 +7,7 @@ import { FitSection } from "@/components/coaching/fit-section";
 import { FinalCta } from "@/components/final-cta";
 import sessionsImage from "@/assets/images/coaching-1on1-desk.webp";
 import planImage from "@/assets/images/coaching-plan-whiteboard.webp";
-import accountabilityImage from "@/assets/images/coaching-accountability.webp";
+import accountabilityImage from "@/assets/images/coaching-checkin-planner.webp";
 
 export const metadata: Metadata = {
   title: "Personal Development & Life Coaching",
@@ -42,7 +42,7 @@ const whatYouGet = [
       "Between sessions, Ryan checks in — coaching that holds you to what you said you'd do.",
     glyph: "03",
     image: accountabilityImage,
-    imageAlt: "A checked-off to-do list next to a check-in text from Ryan",
+    imageAlt: "A weekly planner next to a check-in text from Ryan",
   },
 ];
 
