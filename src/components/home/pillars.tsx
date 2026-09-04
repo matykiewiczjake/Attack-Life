@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { HoverLift } from "@/components/hover-lift";
 import retreatsImage from "@/assets/images/pillars-retreats.webp";
-import coachingImage from "@/assets/images/pillars-coaching.webp";
+import coachingImage from "@/assets/images/coaching-plan-whiteboard.webp";
 import peptidesImage from "@/assets/images/pillars-peptides.webp";
 
 export function Pillars() {

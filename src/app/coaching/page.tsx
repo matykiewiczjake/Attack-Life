@@ -5,7 +5,7 @@ import { Reveal } from "@/components/reveal";
 import { PhotoFeatureGrid } from "@/components/photo-feature-grid";
 import { FitSection } from "@/components/coaching/fit-section";
 import { FinalCta } from "@/components/final-cta";
-import planImage from "@/assets/images/coaching-plan.webp";
+import planImage from "@/assets/images/coaching-plan-whiteboard.webp";
 import accountabilityImage from "@/assets/images/coaching-accountability.webp";
 
 export const metadata: Metadata = {
@@ -30,7 +30,7 @@ const whatYouGet = [
       "No fixed curriculum. Every coaching relationship starts with where you actually are and what you're trying to change.",
     glyph: "02",
     image: planImage,
-    imageAlt: "A handwritten plan notebook with mindset, health, and work goals",
+    imageAlt: "Ryan walking a client through a plan on a whiteboard",
   },
   {
     icon: MessageSquare,
