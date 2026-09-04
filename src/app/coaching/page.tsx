@@ -6,6 +6,7 @@ import { PhotoFeatureGrid } from "@/components/photo-feature-grid";
 import { FitSection } from "@/components/coaching/fit-section";
 import { FinalCta } from "@/components/final-cta";
 import planImage from "@/assets/images/coaching-plan.webp";
+import accountabilityImage from "@/assets/images/coaching-accountability.webp";
 
 export const metadata: Metadata = {
   title: "Personal Development & Life Coaching",
@@ -37,6 +38,8 @@ const whatYouGet = [
     description:
       "Between sessions, Ryan checks in — coaching that holds you to what you said you'd do.",
     glyph: "03",
+    image: accountabilityImage,
+    imageAlt: "A checked-off to-do list next to a check-in text from Ryan",
   },
 ];
 
