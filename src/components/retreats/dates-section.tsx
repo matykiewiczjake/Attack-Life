@@ -1,8 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/reveal";
-import { TiltPanel } from "@/components/tilt-panel";
 import { contactHref } from "@/lib/site-config";
+import datesImage from "@/assets/images/retreats-dates.jpg";
 
 export function DatesSection() {
   return (
@@ -31,13 +32,12 @@ export function DatesSection() {
         </Reveal>
 
         <Reveal delay={0.1} className="relative min-h-[16rem] sm:min-h-[22rem]">
-          {/* Placeholder — replace with real retreat villa photography */}
-          <TiltPanel
-            tone="primary"
-            aspect=""
-            glyph="AL"
-            glyphClassName="text-8xl"
-            className="h-full w-full"
+          <Image
+            src={datesImage}
+            alt="A retreat guest ziplining above the Sacred Valley"
+            fill
+            className="object-cover"
+            sizes="(min-width: 640px) 50vw, 100vw"
           />
         </Reveal>
       </div>
