@@ -1,8 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/reveal";
-import { contactHref } from "@/lib/site-config";
 import datesImage from "@/assets/images/retreats-dates.jpg";
 
 export function DatesSection() {
@@ -29,15 +26,6 @@ export function DatesSection() {
               reach out and Ryan will let you know what&apos;s next, what it
               costs, and whether it&apos;s a fit for where you&apos;re at.
             </p>
-            <Button
-              nativeButton={false}
-              size="lg"
-              variant="outline"
-              className="mt-6 h-12 rounded-none px-6 text-base font-bold"
-              render={<Link href={contactHref} />}
-            >
-              Contact Ryan to Book
-            </Button>
           </div>
         </Reveal>
       </div>

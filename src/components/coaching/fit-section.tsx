@@ -1,9 +1,6 @@
-import Link from "next/link";
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/reveal";
-import { contactHref } from "@/lib/site-config";
 import fitImage from "@/assets/images/coaching-fit.webp";
 
 const fitSignals = [
@@ -51,15 +48,6 @@ export function FitSection() {
                 </li>
               ))}
             </ul>
-            <Button
-              nativeButton={false}
-              size="lg"
-              variant="outline"
-              className="mt-8 h-12 rounded-none border-primary bg-transparent px-6 text-base font-bold text-foreground hover:bg-primary/10"
-              render={<Link href={contactHref} />}
-            >
-              Contact Ryan
-            </Button>
           </div>
         </Reveal>
       </div>
