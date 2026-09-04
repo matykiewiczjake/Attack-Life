@@ -1,19 +1,21 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/reveal";
-import { TiltPanel } from "@/components/tilt-panel";
 import { contactHref } from "@/lib/site-config";
+import coachingHeroImage from "@/assets/images/coaching-hero.webp";
 
 export function CoachingHero() {
   return (
     <section className="relative flex min-h-[26rem] items-center overflow-hidden border-b border-border/70 sm:min-h-[30rem] lg:min-h-[34rem]">
       <div className="absolute inset-0">
-        {/* Placeholder — replace with real coaching photography */}
-        <TiltPanel
-          tone="secondary"
-          aspect=""
-          glyphClassName="text-[10rem] sm:text-[16rem]"
-          className="h-full w-full"
+        <Image
+          src={coachingHeroImage}
+          alt="Ryan coaching a client at his desk"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/75 to-background/15" />
       </div>
