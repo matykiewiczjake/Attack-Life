@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -13,6 +14,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { contactHref, navLinks, siteConfig } from "@/lib/site-config";
+import logo from "@/assets/images/logo.webp";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -20,11 +22,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/90 backdrop-blur-sm">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link
-          href="/"
-          className="font-heading text-lg font-black tracking-tight text-foreground uppercase"
-        >
-          {siteConfig.name}
+        <Link href="/" className="shrink-0">
+          <Image src={logo} alt={siteConfig.name} className="h-9 w-auto sm:h-10" priority />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

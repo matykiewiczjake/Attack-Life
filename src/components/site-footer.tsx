@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { contactHref, navLinks, siteConfig } from "@/lib/site-config";
+import logo from "@/assets/images/logo.webp";
 
 export function SiteFooter() {
   return (
@@ -7,11 +9,8 @@ export function SiteFooter() {
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-10 md:flex-row md:justify-between">
           <div className="max-w-sm">
-            <Link
-              href="/"
-              className="font-heading text-lg font-black tracking-tight text-foreground uppercase"
-            >
-              {siteConfig.name}
+            <Link href="/" className="inline-block">
+              <Image src={logo} alt={siteConfig.name} className="h-10 w-auto" />
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
               {siteConfig.tagline} Retreats, coaching, and peptide research —
