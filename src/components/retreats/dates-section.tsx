@@ -9,7 +9,17 @@ export function DatesSection() {
   return (
     <section className="bg-background">
       <div className="grid sm:grid-cols-2">
-        <Reveal className="flex items-center px-4 py-14 sm:px-10 sm:py-16 lg:px-16 xl:px-24">
+        <Reveal className="relative min-h-[16rem] sm:min-h-[22rem]">
+          <Image
+            src={datesImage}
+            alt="A retreat guest ziplining above the Sacred Valley"
+            fill
+            className="object-cover"
+            sizes="(min-width: 640px) 50vw, 100vw"
+          />
+        </Reveal>
+
+        <Reveal delay={0.1} className="flex items-center px-4 py-14 sm:px-10 sm:py-16 lg:px-16 xl:px-24">
           <div className="max-w-lg">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Retreats run in small cohorts throughout the year.
@@ -29,16 +39,6 @@ export function DatesSection() {
               Contact Ryan to Book
             </Button>
           </div>
-        </Reveal>
-
-        <Reveal delay={0.1} className="relative min-h-[16rem] sm:min-h-[22rem]">
-          <Image
-            src={datesImage}
-            alt="A retreat guest ziplining above the Sacred Valley"
-            fill
-            className="object-cover"
-            sizes="(min-width: 640px) 50vw, 100vw"
-          />
         </Reveal>
       </div>
     </section>
