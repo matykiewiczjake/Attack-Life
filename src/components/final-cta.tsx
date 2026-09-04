@@ -23,7 +23,13 @@ export function FinalCta({
   return (
     <section className="relative overflow-hidden bg-background">
       <div className="absolute inset-0">
-        <Image src={ctaImage} alt="" fill className="object-cover" sizes="100vw" />
+        <Image
+          src={ctaImage}
+          alt=""
+          fill
+          className="object-cover object-[center_38%]"
+          sizes="100vw"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/15" />
       </div>
 
