@@ -14,6 +14,8 @@ type PageHeroProps = {
     image?: StaticImageData;
     imageAlt?: string;
   };
+  backgroundImage?: StaticImageData;
+  backgroundImageAlt?: string;
   children?: ReactNode;
 };
 
@@ -23,13 +25,34 @@ export function PageHero({
   title,
   description,
   visual,
+  backgroundImage,
+  backgroundImageAlt,
   children,
 }: PageHeroProps) {
   return (
-    <section className="sunset-glow relative border-b border-border/70">
+    <section
+      className={cn(
+        "relative border-b border-border/70",
+        !backgroundImage && "sunset-glow"
+      )}
+    >
+      {backgroundImage && (
+        <div className="absolute inset-0">
+          <Image
+            src={backgroundImage}
+            alt={backgroundImageAlt ?? ""}
+            fill
+            priority
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-background/85" />
+        </div>
+      )}
+
       <div
         className={cn(
-          "mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24",
+          "relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24",
           visual && "grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16"
         )}
       >

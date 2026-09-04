@@ -7,6 +7,7 @@ import { Reveal } from "@/components/reveal";
 import { IconFeatureGrid } from "@/components/icon-feature-grid";
 import { FinalCta } from "@/components/final-cta";
 import peptidesHeroImage from "@/assets/images/peptides-hero.jpg";
+import peptidesBackgroundImage from "@/assets/images/pillars-peptides.webp";
 
 export const metadata: Metadata = {
   title: "Research Peptides",
@@ -37,6 +38,8 @@ export default function PeptidesPage() {
         eyebrow="Research Peptides"
         title="A research-focused connection point."
         description="Ryan connects people with sourcing for peptide research — a direct conversation, not a storefront."
+        backgroundImage={peptidesBackgroundImage}
+        backgroundImageAlt="Research peptide vials at desert sunset"
         visual={{
           tone: "outline",
           glyph: "RP",
