@@ -15,9 +15,9 @@ type FinalCtaProps = {
 };
 
 export function FinalCta({
-  eyebrow,
-  title = "Let's Talk",
-  description = "Tell Ryan what you're working on and where you want to go.",
+  eyebrow = "Next Step",
+  title = "A stronger you starts here.",
+  description = "If you're serious about making a change, let's talk and find the right path forward.",
   showButton = true,
 }: FinalCtaProps = {}) {
   return (

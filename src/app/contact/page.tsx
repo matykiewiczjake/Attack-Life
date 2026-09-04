@@ -55,12 +55,7 @@ export default async function ContactPage({
         </div>
       </section>
 
-      <FinalCta
-        eyebrow="Next Step"
-        title="A stronger you starts here."
-        description="If you're serious about making a change, let's talk and find the right path forward."
-        showButton={false}
-      />
+      <FinalCta showButton={false} />
     </>
   );
 }
