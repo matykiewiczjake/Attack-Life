@@ -1,9 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/reveal";
-import { TiltPanel } from "@/components/tilt-panel";
 import { contactHref } from "@/lib/site-config";
+import fitImage from "@/assets/images/coaching-fit.webp";
 
 const fitSignals = [
   "You're ready for direct feedback, not just encouragement.",
@@ -16,14 +17,14 @@ export function FitSection() {
     <section className="bg-background">
       <div className="grid sm:grid-cols-2">
         <Reveal className="relative min-h-[16rem] sm:min-h-[22rem]">
-          {/* Placeholder — replace with real coaching photography */}
-          <TiltPanel
-            tone="outline"
-            aspect=""
-            glyph="PD"
-            glyphClassName="text-8xl"
-            className="h-full w-full"
+          <Image
+            src={fitImage}
+            alt="A gym bag and shaker bottle packed for the day"
+            fill
+            className="object-cover"
+            sizes="(min-width: 640px) 50vw, 100vw"
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-background" />
         </Reveal>
 
         <Reveal
@@ -54,7 +55,7 @@ export function FitSection() {
               nativeButton={false}
               size="lg"
               variant="outline"
-              className="mt-8 h-12 rounded-none px-6 text-base font-bold"
+              className="mt-8 h-12 rounded-none border-primary bg-transparent px-6 text-base font-bold text-foreground hover:bg-primary/10"
               render={<Link href={contactHref} />}
             >
               Contact Ryan
