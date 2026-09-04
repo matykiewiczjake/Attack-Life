@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/reveal";
-import ryanImage from "@/assets/images/founder-ryan.webp";
+import ryanImage from "@/assets/images/founder-ryan.jpg";
 
 export function FounderStrip() {
   return (
@@ -11,7 +11,7 @@ export function FounderStrip() {
         <Reveal className="relative min-h-[18rem] sm:min-h-[26rem] lg:min-h-[30rem]">
           <Image
             src={ryanImage}
-            alt="Ryan sitting on a rock outcrop in the desert at sunset"
+            alt="Ryan at Machu Picchu"
             fill
             className="object-cover"
             sizes="(min-width: 640px) 50vw, 100vw"
