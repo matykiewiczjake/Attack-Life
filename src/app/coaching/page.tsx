@@ -5,7 +5,7 @@ import { Reveal } from "@/components/reveal";
 import { PhotoFeatureGrid } from "@/components/photo-feature-grid";
 import { FitSection } from "@/components/coaching/fit-section";
 import { FinalCta } from "@/components/final-cta";
-import sessionsImage from "@/assets/images/coaching-1on1-desk.webp";
+import sessionsImage from "@/assets/images/coaching-1on1-tracker.webp";
 import planImage from "@/assets/images/coaching-plan-whiteboard.webp";
 import accountabilityImage from "@/assets/images/coaching-checkin-planner.webp";
 
@@ -24,7 +24,7 @@ const whatYouGet = [
       "Direct time with Ryan, not a rotating roster of coaches — consistent sessions built around your goals.",
     glyph: "01",
     image: sessionsImage,
-    imageAlt: "A coffee and notebook with goals laid out for a session",
+    imageAlt: "A laptop on a video call sharing a client plan tracker",
   },
   {
     icon: Target,
