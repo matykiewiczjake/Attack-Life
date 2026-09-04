@@ -29,9 +29,9 @@ export function FitSection() {
 
         <Reveal
           delay={0.1}
-          className="flex items-center px-4 py-14 sm:px-10 sm:py-16 lg:px-16 xl:px-24"
+          className="flex items-center px-4 py-14 sm:px-10 sm:py-16 lg:px-16"
         >
-          <div className="max-w-lg">
+          <div className="w-full">
             <p className="text-sm font-bold tracking-[0.15em] text-primary uppercase">
               Is This a Fit?
             </p>
