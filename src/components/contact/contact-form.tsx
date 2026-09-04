@@ -109,7 +109,12 @@ export function ContactForm({ defaultInterest }: ContactFormProps) {
           }
         >
           <SelectTrigger id="interest" className="w-full">
-            <SelectValue placeholder="Select an option" />
+            <SelectValue placeholder="Select an option">
+              {(value: string) =>
+                interestOptions.find((option) => option.value === value)
+                  ?.label ?? value
+              }
+            </SelectValue>
           </SelectTrigger>
           <SelectContent>
             {interestOptions.map((option) => (

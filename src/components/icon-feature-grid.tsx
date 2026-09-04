@@ -23,7 +23,7 @@ export function IconFeatureGrid({ features, columns = 2 }: IconFeatureGridProps)
     >
       {features.map((feature, index) => (
         <Reveal key={feature.title} delay={index * 0.08}>
-          <div className="h-full border border-border/70 bg-card p-6">
+          <div className="h-full border border-border/70 bg-card p-6 transition-colors duration-300 hover:border-primary/50">
             <feature.icon className="size-6 text-primary" aria-hidden />
             <p className="font-heading mt-4 font-bold text-foreground">
               {feature.title}

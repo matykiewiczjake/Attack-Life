@@ -68,12 +68,12 @@ export default function PeptidesPage() {
         <div className="mt-10 grid gap-5 sm:grid-cols-2">
           {info.map((item) => (
             <Reveal key={item.title}>
-              <div className="relative aspect-[5/2] w-full overflow-hidden border border-border/70">
+              <div className="group relative aspect-[5/2] w-full overflow-hidden border border-border/70 transition-colors duration-300 hover:border-primary/50">
                 <Image
                   src={item.image}
                   alt={item.imageAlt}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(min-width: 640px) 50vw, 100vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent" />

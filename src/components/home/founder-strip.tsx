@@ -31,12 +31,11 @@ export function FounderStrip() {
               about changing.
             </h2>
             <p className="mt-6 leading-relaxed text-muted-foreground">
-              [Placeholder] Ryan built Attack Life after his own reset —
-              walking away from what wasn&apos;t working and rebuilding a
-              life on his own terms. Every retreat, every coaching
-              relationship, and every conversation starts from that same
-              place: no scripts, no franchise playbook, just direct, honest
-              work.
+              Ryan built Attack Life after his own reset — walking away from
+              what wasn&apos;t working and rebuilding a life on his own terms.
+              Every retreat, every coaching relationship, and every
+              conversation starts from that same place: no scripts, no
+              franchise playbook, just direct, honest work.
             </p>
             <Link
               href="/about"

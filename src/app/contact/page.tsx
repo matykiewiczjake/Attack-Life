@@ -4,7 +4,7 @@ import { Reveal } from "@/components/reveal";
 import { ContactForm } from "@/components/contact/contact-form";
 import { ConnectChannels } from "@/components/contact/connect-channels";
 import { FinalCta } from "@/components/final-cta";
-import contactHeroImage from "@/assets/images/contact-hero-overlook.webp";
+import contactHeroImage from "@/assets/images/contact-hero-overlook.jpg";
 
 export const metadata: Metadata = {
   title: "Contact Ryan",
@@ -32,7 +32,7 @@ export default async function ContactPage({
           tone: "primary",
           glyph: "CR",
           image: contactHeroImage,
-          imageAlt: "Ryan taking in the view from a ridge at sunset",
+          imageAlt: "Ryan looking out over the valley near Machu Picchu",
         }}
       />
 

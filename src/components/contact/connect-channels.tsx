@@ -28,7 +28,7 @@ export function ConnectChannels() {
       <ul className="mt-6 space-y-4">
         {channels.map((channel) => (
           <li key={channel.title}>
-            <div className="flex items-start gap-4 border border-border/70 p-6">
+            <div className="flex items-start gap-4 border border-border/70 p-6 transition-colors duration-300 hover:border-primary/50">
               <channel.icon
                 className="mt-0.5 size-7 shrink-0 text-primary"
                 strokeWidth={1.5}
