@@ -60,41 +60,45 @@ export function ContactForm({ defaultInterest }: ContactFormProps) {
 
   return (
     <form action={formAction} className="space-y-6" noValidate>
-      <div className="grid gap-6 sm:grid-cols-2">
-        <div className="space-y-2">
-          <Label htmlFor="name">Name</Label>
-          <Input
-            id="name"
-            name="name"
-            autoComplete="name"
-            placeholder="Your name"
-            aria-invalid={Boolean(state.errors?.name)}
-            required
-          />
-          {state.errors?.name && (
-            <p className="text-sm text-destructive">{state.errors.name}</p>
-          )}
-        </div>
-
-        <div className="space-y-2">
-          <Label htmlFor="email">Email</Label>
-          <Input
-            id="email"
-            name="email"
-            type="email"
-            autoComplete="email"
-            placeholder="you@example.com"
-            aria-invalid={Boolean(state.errors?.email)}
-            required
-          />
-          {state.errors?.email && (
-            <p className="text-sm text-destructive">{state.errors.email}</p>
-          )}
-        </div>
+      <div className="space-y-2">
+        <Label htmlFor="name">
+          Name <span aria-hidden="true">*</span>
+        </Label>
+        <Input
+          id="name"
+          name="name"
+          autoComplete="name"
+          placeholder="Your name"
+          aria-invalid={Boolean(state.errors?.name)}
+          required
+        />
+        {state.errors?.name && (
+          <p className="text-sm text-destructive">{state.errors.name}</p>
+        )}
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="interest">What are you interested in?</Label>
+        <Label htmlFor="email">
+          Email <span aria-hidden="true">*</span>
+        </Label>
+        <Input
+          id="email"
+          name="email"
+          type="email"
+          autoComplete="email"
+          placeholder="Your email"
+          aria-invalid={Boolean(state.errors?.email)}
+          required
+        />
+        {state.errors?.email && (
+          <p className="text-sm text-destructive">{state.errors.email}</p>
+        )}
+      </div>
+
+      <div className="space-y-2">
+        <Label htmlFor="interest">
+          What are you interested in? <span aria-hidden="true">*</span>
+        </Label>
         <Select
           name="interest"
           required
@@ -105,7 +109,7 @@ export function ContactForm({ defaultInterest }: ContactFormProps) {
           }
         >
           <SelectTrigger id="interest" className="w-full">
-            <SelectValue placeholder="Choose one" />
+            <SelectValue placeholder="Select an option" />
           </SelectTrigger>
           <SelectContent>
             {interestOptions.map((option) => (
@@ -121,12 +125,14 @@ export function ContactForm({ defaultInterest }: ContactFormProps) {
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="message">Message</Label>
+        <Label htmlFor="message">
+          Message <span aria-hidden="true">*</span>
+        </Label>
         <Textarea
           id="message"
           name="message"
           rows={6}
-          placeholder="Tell Ryan what you're working on and where you want to go."
+          placeholder="Tell me a bit about what's on your mind..."
           aria-invalid={Boolean(state.errors?.message)}
           required
         />

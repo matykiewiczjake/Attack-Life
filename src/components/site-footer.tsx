@@ -1,7 +1,15 @@
-import Link from "next/link";
 import Image from "next/image";
-import { contactHref, navLinks, siteConfig } from "@/lib/site-config";
+import Link from "next/link";
+import { Mail, Phone } from "lucide-react";
+import { InstagramIcon } from "@/components/icons/instagram";
+import { navLinks, siteConfig } from "@/lib/site-config";
 import logo from "@/assets/images/logo.webp";
+
+const connectChannels = [
+  { icon: Phone, label: "Call Ryan" },
+  { icon: InstagramIcon, label: "Instagram" },
+  { icon: Mail, label: "Email" },
+];
 
 export function SiteFooter() {
   return (
@@ -37,14 +45,14 @@ export function SiteFooter() {
             <div>
               <p className="text-sm font-medium text-foreground">Connect</p>
               <ul className="mt-3 space-y-2">
-                <li>
-                  <Link
-                    href={contactHref}
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    Contact Ryan
-                  </Link>
-                </li>
+                {connectChannels.map((channel) => (
+                  <li key={channel.label}>
+                    <span className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <channel.icon className="size-4" aria-hidden />
+                      {channel.label}
+                    </span>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
