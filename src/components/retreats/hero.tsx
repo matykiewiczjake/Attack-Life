@@ -22,7 +22,7 @@ export function RetreatsHero() {
 
       <div className="relative mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         <Reveal immediate delay={0}>
-          <span className="inline-block bg-foreground px-3 py-1.5 text-xs font-bold tracking-[0.15em] text-background uppercase">
+          <span className="inline-block border border-primary bg-background/60 px-3 py-1.5 text-xs font-bold tracking-[0.15em] text-primary uppercase">
             Guided Retreats
           </span>
         </Reveal>
