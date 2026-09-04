@@ -61,31 +61,30 @@ export default function PeptidesPage() {
           <p className="text-sm font-bold tracking-[0.15em] text-primary uppercase">
             What to Know
           </p>
-          <h2 className="mt-3 max-w-2xl text-3xl font-black tracking-tight text-foreground uppercase sm:text-4xl">
+          <h2 className="mt-3 text-3xl font-black tracking-tight text-foreground uppercase sm:text-4xl">
             Straightforward, compliant, and direct.
           </h2>
         </Reveal>
         <div className="mt-10 grid gap-5 sm:grid-cols-2">
           {info.map((item) => (
             <Reveal key={item.title}>
-              <div className="h-full overflow-hidden border border-border/70 bg-card">
-                <div className="relative aspect-[2.9/1] w-full">
-                  <Image
-                    src={item.image}
-                    alt={item.imageAlt}
-                    fill
-                    className="object-cover"
-                    sizes="(min-width: 640px) 50vw, 100vw"
-                  />
-                </div>
-                <div className="p-5">
-                  <div className="flex items-center gap-2.5 border-b border-border/70 pb-3">
+              <div className="relative aspect-[5/2] w-full overflow-hidden border border-border/70">
+                <Image
+                  src={item.image}
+                  alt={item.imageAlt}
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 640px) 50vw, 100vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-5">
+                  <div className="flex items-center gap-2.5">
                     <item.icon className="size-5 text-primary" aria-hidden />
                     <p className="font-heading font-bold text-foreground">
                       {item.title}
                     </p>
                   </div>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                     {item.description}
                   </p>
                 </div>
