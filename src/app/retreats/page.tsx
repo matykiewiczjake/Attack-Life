@@ -5,6 +5,8 @@ import { Reveal } from "@/components/reveal";
 import { IncludedGrid } from "@/components/retreats/included-grid";
 import { DatesSection } from "@/components/retreats/dates-section";
 import { FinalCta } from "@/components/final-cta";
+import smallGroupsImage from "@/assets/images/retreats-small-groups.jpg";
+import mealsImage from "@/assets/images/retreats-meals.jpg";
 
 export const metadata: Metadata = {
   title: "Guided Retreats",
@@ -20,6 +22,8 @@ const included = [
     description:
       "Retreats stay small by design — enough people to build real connection, few enough that Ryan works with everyone directly.",
     glyph: "01",
+    image: smallGroupsImage,
+    imageAlt: "A small retreat group together at Machu Picchu",
   },
   {
     icon: CalendarRange,
@@ -34,6 +38,8 @@ const included = [
     description:
       "Everything during the retreat is handled — you show up and do the work.",
     glyph: "03",
+    image: mealsImage,
+    imageAlt: "The retreat group sharing a meal together",
   },
 ];
 
