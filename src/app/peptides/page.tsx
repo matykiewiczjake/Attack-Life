@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { FlaskConical, MessageCircle, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
-import { PhotoFeatureGrid } from "@/components/photo-feature-grid";
 import { FinalCta } from "@/components/final-cta";
 import peptidesBackgroundImage from "@/assets/images/pillars-peptides.webp";
 import researchNotesImage from "@/assets/images/peptides-research-notes.webp";
@@ -23,7 +23,6 @@ const info = [
     title: "Research Use Only",
     description:
       "Everything discussed here is intended for laboratory research purposes only — not for human consumption.",
-    glyph: "01",
     image: researchNotesImage,
     imageAlt: "Research notes and peptide vials on a lab bench",
   },
@@ -32,7 +31,6 @@ const info = [
     title: "A Direct Conversation",
     description:
       "If you have questions about sourcing or research context, reach out and Ryan will talk it through with you directly.",
-    glyph: "02",
     image: directConversationImage,
     imageAlt: "Ryan on a video call at his desk",
   },
@@ -67,8 +65,33 @@ export default function PeptidesPage() {
             Straightforward, compliant, and direct.
           </h2>
         </Reveal>
-        <div className="mt-10">
-          <PhotoFeatureGrid features={info} columns={2} />
+        <div className="mt-10 grid gap-5 sm:grid-cols-2">
+          {info.map((item) => (
+            <Reveal key={item.title}>
+              <div className="h-full overflow-hidden border border-border/70 bg-card">
+                <div className="relative aspect-[2.9/1] w-full">
+                  <Image
+                    src={item.image}
+                    alt={item.imageAlt}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 640px) 50vw, 100vw"
+                  />
+                </div>
+                <div className="p-5">
+                  <div className="flex items-center gap-2.5 border-b border-border/70 pb-3">
+                    <item.icon className="size-5 text-primary" aria-hidden />
+                    <p className="font-heading font-bold text-foreground">
+                      {item.title}
+                    </p>
+                  </div>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+          ))}
         </div>
 
         <Reveal delay={0.2} className="mt-16 flex justify-center">
