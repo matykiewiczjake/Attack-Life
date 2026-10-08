@@ -43,7 +43,7 @@ export default async function Image() {
           Stop planning your comeback. Start living.
         </div>
         <div style={{ marginTop: 28, fontSize: 28, color: "#c98a4b" }}>
-          Retreats &middot; Life Coaching &middot; Research Peptides
+          Retreats &middot; Life Coaching
         </div>
       </div>
     ),

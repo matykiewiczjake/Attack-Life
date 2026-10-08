@@ -9,7 +9,7 @@ import contactHeroImage from "@/assets/images/contact-hero-overlook.jpg";
 export const metadata: Metadata = {
   title: "Contact Ryan",
   description:
-    "Tell Ryan what you're working on and where you want to go — retreats, coaching, or research peptides. He responds personally.",
+    "Tell Ryan what you're working on and where you want to go — retreats or coaching. He responds personally.",
   alternates: { canonical: "/contact" },
 };
 

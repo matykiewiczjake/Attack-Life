@@ -3,7 +3,7 @@ export const siteConfig = {
   founder: "Ryan",
   tagline: "Personal development, built around real conversations.",
   description:
-    "Attack Life is a founder-led personal development brand offering guided retreats, one-on-one life coaching, and research peptide connections — every path leads to a direct conversation with Ryan.",
+    "Attack Life is a founder-led personal development brand offering guided retreats and one-on-one life coaching — every path leads to a direct conversation with Ryan.",
   url: "https://attacklife.com",
   ogImage: "/opengraph-image",
 } as const;
@@ -16,7 +16,6 @@ export type NavLink = {
 export const navLinks: NavLink[] = [
   { label: "Retreats", href: "/retreats" },
   { label: "Coaching", href: "/coaching" },
-  { label: "Peptides", href: "/peptides" },
   { label: "About", href: "/about" },
 ];
 

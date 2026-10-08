@@ -1,8 +1,8 @@
 # Attack Life
 
 Marketing site for Attack Life — a founder-led personal development brand
-(guided retreats, life coaching, and research peptides). Every page routes to
-a direct conversation with Ryan; there is no self-serve booking or checkout.
+(guided retreats and life coaching). Every page routes to a direct
+conversation with Ryan; there is no self-serve booking or checkout.
 
 ## Stack
 
@@ -31,7 +31,6 @@ and anon key once the contact form is wired up.
 - [x] Homepage — design direction (fonts, colors, spacing) pending approval
 - [ ] `/retreats`
 - [ ] `/coaching`
-- [ ] `/peptides`
 - [ ] `/about`
 - [ ] `/contact` (Supabase-backed lead routing)
 

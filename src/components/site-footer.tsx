@@ -21,8 +21,8 @@ export function SiteFooter() {
               <Image src={logo} alt={siteConfig.name} className="h-10 w-auto" />
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              {siteConfig.tagline} Retreats, coaching, and peptide research —
-              every path leads to a conversation with Ryan.
+              {siteConfig.tagline} Retreats and coaching — every path leads
+              to a conversation with Ryan.
             </p>
           </div>
 
@@ -58,15 +58,10 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 border-t border-border/70 pt-6 text-xs text-muted-foreground/90 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 border-t border-border/70 pt-6 text-xs text-muted-foreground/90">
           <p>
             &copy; {new Date().getFullYear()} {siteConfig.name}. All rights
             reserved.
-          </p>
-          <p className="max-w-xl">
-            Peptide information on this site is provided for research
-            purposes only. Not for human consumption. Not intended to
-            diagnose, treat, cure, or prevent any disease.
           </p>
         </div>
       </div>

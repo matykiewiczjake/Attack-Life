@@ -47,9 +47,9 @@ export function Hero() {
           <Reveal immediate delay={0.2}>
             <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
               Attack Life is Ryan&apos;s personal development practice —
-              guided retreats, one-on-one coaching, and research peptide
-              connections. Every path starts the same way: a direct
-              conversation with Ryan, so the work fits you, not a program.
+              guided retreats and one-on-one coaching. Every path starts the
+              same way: a direct conversation with Ryan, so the work fits
+              you, not a program.
             </p>
           </Reveal>
 

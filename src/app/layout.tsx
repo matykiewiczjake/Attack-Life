@@ -26,7 +26,6 @@ export const metadata: Metadata = {
     "personal development coach",
     "life coaching",
     "guided retreats",
-    "research peptides",
     "Attack Life",
     "Ryan",
   ],
